@@ -13,7 +13,7 @@ const deleteItem = (resourceId) => {
         try {
 
             // Make an asynchronous HTTP request to delete the resource
-            const response = await fetch(`http://localhost:5000/movieDelete/${resourceId}`, {
+            const response = await fetch(`https://xine-com.onrender.com/movieDelete/${resourceId}`, {
                 method: 'DELETE',
             });
 
@@ -35,7 +35,7 @@ const fetchData = () => async (dispatch) => {
     const dispach = useDispatch()
     try {
         // Make an API call to fetch data from MongoDB
-        const response = await fetch('http://localhost:5000/movie');
+        const response = await fetch('https://xine-com.onrender.com/movie');
         const data = await response.json();
         // console.log(...data)
 
@@ -72,7 +72,7 @@ const updateWatchMovie = (data) => async (dispatch) => {
     try {
         console.log(data)
         // Make an API call to send data to the server
-        await fetch('http://localhost:5000/movieUpdate', {
+        await fetch('https://xine-com.onrender.com/movieUpdate', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
