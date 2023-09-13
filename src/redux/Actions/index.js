@@ -49,7 +49,7 @@ const fetchData = () => async (dispatch) => {
 const saveDataToMongoDB = (data) => async (dispatch) => {
     try {
         // Make an API call to send data to the server
-        await fetch('http://localhost:5000/moviePost', {
+        await fetch('https://xine-com.onrender.com/moviePost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
